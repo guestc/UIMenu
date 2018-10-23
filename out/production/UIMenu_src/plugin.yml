@@ -1,0 +1,6 @@
+name: UIMenu
+main: cn.guestc.uimenu.UIMenu
+author: Guestc
+version: "1.0.0"
+api: ["1.0.5"]
+description: "A simple UIMenu for nukkit"
