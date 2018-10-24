@@ -62,7 +62,6 @@ public class UIMenu extends PluginBase implements Listener {
             }
             Forms.put(entry.getKey(),form);
         }
-        getLogger().warning("data "+Forms.get("menu").getJSONData());
     }
 
     private String getButtonIdFromText(String text){
@@ -119,10 +118,9 @@ public class UIMenu extends PluginBase implements Listener {
             FormWindowSimple form = (FormWindowSimple) event.getWindow();
             String fid = getFormIdFromText(form.getTitle(),form.getContent());
             if(fid != null){
-                for(ElementButton bt : form.getButtons()){
-                    String bid = getButtonIdFromText(bt.getText());
-                    if(bid != null) ExecuteButton(bid,p);
-                }
+                ElementButton bt = form.getResponse().getClickedButton();
+                String bid = getButtonIdFromText(bt.getText());
+                if(bid != null) ExecuteButton(bid,p);
             }
         }
     }
@@ -135,6 +133,6 @@ class ButtonData{
     public ButtonData(ElementButton bt,String t,String d){
         button = bt;
         type = t;
-        data = t;
+        data = d;
     }
 }

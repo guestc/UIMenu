@@ -10,17 +10,17 @@ buttons:
   shop:
     type: "command"
     text: "商店"
-    data: "/plugins"
+    data: "plugins"
     image: "shop_icon"
   spawn:
     type: "command"
     text: "主城"
-    data: "/spawn"
+    data: "spawn"
     image: "spawn_icon"
   home:
     type: "command"
     text: "回家"
-    data: "/home"
+    data: "home"
     image: "home_icon"
 images:
   spawn_icon:
